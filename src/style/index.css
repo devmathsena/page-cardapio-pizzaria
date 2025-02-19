@@ -13,10 +13,16 @@
 
 body {
     font-family: "Roboto", serif;
+    padding-top: 2.25rem;
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: var(--color-grey);
+    z-index: 1000;
 }
 
 nav > ul {
@@ -78,6 +84,7 @@ nav > ul > li {
     font-size: 2rem;
     font-weight: 200;
     margin-bottom: 1rem;
+    padding-top: 1.25rem;
 }
 
 .hero__text {
@@ -88,7 +95,7 @@ nav > ul > li {
 .button {
     text-decoration: none;
     font-weight: 600;
-    font-size: .6rem;
+    font-size: .8rem;
     color: var(--color-grey);
     background-color: var(--color-orange);
     padding: .4rem .6rem;
@@ -190,7 +197,7 @@ nav > ul > li {
 }
 
 .about_us__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     margin: 2rem 0;
 }
@@ -199,4 +206,47 @@ nav > ul > li {
     font-size: .9rem;
     margin: 1rem auto;
     padding: 0 2.2rem;
+}
+
+.contact {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    color: var(--color-grey);
+}
+
+.contact__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact__text, .contact__adress p {
+    line-height: 2rem;
+    font-size: .9rem;
+}
+
+a[href^="tel:"] {
+    color: var(--color-grey);
+    text-decoration: none;
+}
+
+a[href^="mailto:"] {
+    color: var(--color-orange);
+}
+
+.contact > .button {
+    font-size: .8rem;
+    margin-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    color: var(--color-orange);
+    background-color: var(--color-grey);
+    padding: 1rem;
+    margin-top: 2rem;
 }
