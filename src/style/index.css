@@ -64,7 +64,7 @@ nav > ul > li {
     left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: inset 0 0 15rem rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 0 50rem rgba(0, 0, 0, 1);
     z-index: 1;
 }
 
@@ -77,7 +77,6 @@ nav > ul > li {
     transform: translate(-50%, -50%);
     color: var(--color-white);
     z-index: 2;
-    
 }
 
 .hero__title {
@@ -102,47 +101,56 @@ nav > ul > li {
     border-radius: .5rem;
 }
 
-.section {
+.menu {
     text-align: center;
 }
 
-.section__title {
+.menu__title {
     margin: 1rem;
     font-size: 1.25rem;
     color: var(--color-grey);
 }
 
-.menu {
+.section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
+    gap: .1rem;
+    row-gap: 1rem;
+    place-items: center;
+    padding: 0 .5rem;
+}
+
+.pizza {
     display: inline-block;
-    width: 15rem;
+    width: 10rem;
     min-height: 18rem;
     background-color: var(--color-light-grey);
     border-radius: 10px;
-    margin: 0.8rem;
+    margin: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
     text-align: center;
 }
 
-.menu:hover {
+.pizza:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.menu__image-wrapper {
+.pizza__image-wrapper {
     width: 100%;
     height: 150px;
     overflow: hidden;
 }
 
-.menu__img {
+.pizza__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.menu__title {
+.pizza__title {
     font-size: 1rem;
     font-weight: 600;
     padding: 15px;
@@ -151,7 +159,7 @@ nav > ul > li {
     margin: 0;
 }
 
-.menu__text {
+.pizza__text {
     font-size: .9rem;
     color: #232323;
     padding: 10px;
