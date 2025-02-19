@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -12,10 +13,16 @@
 
 body {
     font-family: "Roboto", serif;
+    padding-top: 2.25rem;
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: var(--color-grey);
+    z-index: 1000;
 }
 
 nav > ul {
@@ -25,6 +32,7 @@ nav > ul {
 
 nav > ul > li {
     display: inline-block;
+    font-size: .75rem;
 }
 
 .nav__link {
@@ -34,37 +42,211 @@ nav > ul > li {
    padding: 1rem;
 }
 
-.hero__background__container {
+.hero {
     position: relative;
     width: 100%;
+    height: 35vh;
     overflow: hidden;
+}
+
+.hero__background__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.hero__container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 15rem rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .hero__foreground {
     position: absolute;
+    width: 100%;
     top: 40%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
     color: var(--color-white);
+    z-index: 2;
+    
 }
 
 .hero__title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 200;
     margin-bottom: 1rem;
+    padding-top: 1.25rem;
 }
 
 .hero__text {
-    margin-bottom: 1.5rem;
+    margin: 1rem auto;
+    padding: 0 2.2rem;
 }
 
 .button {
     text-decoration: none;
     font-weight: 600;
-    font-size: .9rem;
+    font-size: .8rem;
     color: var(--color-grey);
     background-color: var(--color-orange);
-    padding: .5rem 1rem;
+    padding: .4rem .6rem;
     border-radius: .5rem;
+}
+
+.section {
+    text-align: center;
+}
+
+.section__title {
+    margin: 1rem;
+    font-size: 1.25rem;
+    color: var(--color-grey);
+}
+
+.menu {
+    display: inline-block;
+    width: 15rem;
+    min-height: 18rem;
+    background-color: var(--color-light-grey);
+    border-radius: 10px;
+    margin: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    text-align: center;
+}
+
+.menu:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu__image-wrapper {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.menu__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu__title {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px;
+    color: var(--color-grey);
+    text-align: center;
+    margin: 0;
+}
+
+.menu__text {
+    font-size: .9rem;
+    color: #232323;
+    padding: 10px;
+    text-align: center;
+}
+
+.about_us {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    overflow: hidden;
+    margin: 2.25rem auto;
+}
+
+.about_us__background__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.about_us__container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 20rem rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.about_us__foreground {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    z-index: 10;
+}
+
+.about_us__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+.about_us__text {
+    font-size: .9rem;
+    margin: 1rem auto;
+    padding: 0 2.2rem;
+}
+
+.contact {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    color: var(--color-grey);
+}
+
+.contact__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact__text, .contact__adress p {
+    line-height: 2rem;
+    font-size: .9rem;
+}
+
+a[href^="tel:"] {
+    color: var(--color-grey);
+    text-decoration: none;
+}
+
+a[href^="mailto:"] {
+    color: var(--color-orange);
+}
+
+.contact > .button {
+    font-size: .8rem;
+    margin-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    color: var(--color-orange);
+    background-color: var(--color-grey);
+    padding: 1rem;
+    margin-top: 2rem;
 }
