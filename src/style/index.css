@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -25,6 +26,7 @@ nav > ul {
 
 nav > ul > li {
     display: inline-block;
+    font-size: .75rem;
 }
 
 .nav__link {
@@ -34,23 +36,35 @@ nav > ul > li {
    padding: 1rem;
 }
 
-.hero__background__container {
+.hero {
     position: relative;
     width: 100%;
+    height: 35vh;
     overflow: hidden;
+}
+
+.hero__background__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
 }
 
 .hero__foreground {
     position: absolute;
+    width: 100%;
     top: 40%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
     color: var(--color-white);
+    z-index: 10;
+    
 }
 
 .hero__title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 200;
     margin-bottom: 1rem;
 }
@@ -62,9 +76,67 @@ nav > ul > li {
 .button {
     text-decoration: none;
     font-weight: 600;
-    font-size: .9rem;
+    font-size: .8rem;
     color: var(--color-grey);
     background-color: var(--color-orange);
     padding: .5rem 1rem;
     border-radius: .5rem;
 }
+
+.section {
+    text-align: center;
+}
+
+.section__title {
+    margin: 1rem;
+    font-size: 1.25rem;
+    color: var(--color-grey);
+}
+
+.menu {
+    display: inline-block;
+    width: 15rem;
+    min-height: 18rem;
+    background-color: var(--color-light-grey);
+    border-radius: 10px;
+    margin: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    text-align: center;
+}
+
+.menu:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu__image-wrapper {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.menu__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu__title {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px;
+    color: var(--color-grey);
+    text-align: center;
+    margin: 0;
+}
+
+.menu__text {
+    font-size: .9rem;
+    color: #232323;
+    padding: 10px;
+    text-align: center;
+}
+
+
