@@ -15,7 +15,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: "Roboto", serif;
     padding-top: 2.25rem;
@@ -30,12 +29,12 @@ nav {
     z-index: 1000;
 }
 
-nav>ul {
+nav > ul {
     list-style: none;
     text-align: center;
 }
 
-nav>ul>li {
+nav > ul > li {
     display: inline-block;
     font-size: .75rem;
 }
@@ -45,6 +44,11 @@ nav>ul>li {
     display: block;
     color: var(--color-white);
     padding: 1rem;
+}
+
+.nav__link:hover {
+    color: var(--color-orange);
+    transform: scale(1.1);
 }
 
 .hero {
@@ -281,7 +285,7 @@ footer {
 }
 
 @media (min-width: 1025px) {
-    nav>ul>li {
+    nav > ul > li {
         font-size: .8rem;
     }
 
