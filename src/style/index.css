@@ -11,6 +11,11 @@
     --color-orange: #ffa500;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     font-family: "Roboto", serif;
     padding-top: 2.25rem;
@@ -25,21 +30,21 @@ nav {
     z-index: 1000;
 }
 
-nav > ul {
+nav>ul {
     list-style: none;
     text-align: center;
 }
 
-nav > ul > li {
+nav>ul>li {
     display: inline-block;
     font-size: .75rem;
 }
 
 .nav__link {
-   text-decoration: none;
-   display: block;
-   color: var(--color-white);
-   padding: 1rem;
+    text-decoration: none;
+    display: block;
+    color: var(--color-white);
+    padding: 1rem;
 }
 
 .hero {
@@ -112,12 +117,13 @@ nav > ul > li {
 }
 
 .section {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
-    gap: .1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    column-gap: .5rem;
     row-gap: 1rem;
-    place-items: center;
-    padding: 0 .5rem;
+    place-items: center center;
+    padding: 0 .4rem;
 }
 
 .pizza {
@@ -232,7 +238,8 @@ nav > ul > li {
     margin-bottom: 1rem;
 }
 
-.contact__text, .contact__adress p {
+.contact__text,
+.contact__adress p {
     line-height: 2rem;
     font-size: .9rem;
 }
@@ -246,7 +253,7 @@ a[href^="mailto:"] {
     color: var(--color-orange);
 }
 
-.contact > .button {
+.contact>.button {
     font-size: .8rem;
     margin-top: 1rem;
 }
@@ -257,4 +264,64 @@ footer {
     background-color: var(--color-grey);
     padding: 1rem;
     margin-top: 2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 2fr));
+        column-gap: 2.5rem;
+        row-gap: 1rem;
+        place-items: center;
+        padding: 0 5rem;
+    }
+
+    .pizza {
+        width: 14rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    nav>ul>li {
+        font-size: .8rem;
+    }
+
+    .hero {
+        height: 90vh;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .hero__foreground {
+        top: 30%;
+        left: 50%;
+    }
+
+    .section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-content: center;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .pizza {
+        width: 20rem;
+    }
+
+    .about_us__title,
+    .contact__title {
+        font-size: 2.25rem;
+    }
+
+    .contact__adress {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        flex-wrap: wrap;
+        max-width: 900px;
+        margin: 0 auto;
+    }
 }
