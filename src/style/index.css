@@ -139,4 +139,38 @@ nav > ul > li {
     text-align: center;
 }
 
+.about_us {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    overflow: hidden;
+}
 
+.about_us__background__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.about_us__foreground {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    z-index: 10;
+}
+
+.about_us__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+.about_us__text {
+    margin-bottom: 1rem;
+}
